@@ -13,6 +13,7 @@ import Manufacturing from "./pages/Manufacturing";
 import Distribution from "./pages/Distribution";
 import QualityCompliancePage from "./pages/QualityCompliance";
 import ResearchDevelopment from "./pages/ResearchDevelopment";
+import SustainabilityInitiatives from "./pages/SustainabilityInitiatives";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/distribution" element={<Distribution />} />
           <Route path="/quality-compliance" element={<QualityCompliancePage />} />
           <Route path="/research-development" element={<ResearchDevelopment />} />
+          <Route path="/sustainability-initiatives" element={<SustainabilityInitiatives />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
