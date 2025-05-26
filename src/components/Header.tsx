@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Menu, X, Leaf } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -20,7 +21,7 @@ const Header = () => {
     { name: 'Sustainability', href: '/sustainability-initiatives' },
     { name: 'Solutions', href: '#solutions' },
     { name: 'About', href: '/about' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Contact & Partnerships', href: '/contact-partnerships' },
   ];
 
   const isInternalRoute = (href: string) => href.startsWith('/');
