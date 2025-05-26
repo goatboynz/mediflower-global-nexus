@@ -17,6 +17,7 @@ const Header = () => {
     { name: 'Manufacturing', href: '/manufacturing' },
     { name: 'Distribution', href: '/distribution' },
     { name: 'Quality & Compliance', href: '/quality-compliance' },
+    { name: 'Research & Development', href: '/research-development' },
     { name: 'Solutions', href: '#solutions' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '#contact' },
