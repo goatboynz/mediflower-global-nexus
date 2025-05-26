@@ -16,6 +16,7 @@ const Header = () => {
     { name: 'Custom Technology', href: '/custom-technology' },
     { name: 'Manufacturing', href: '/manufacturing' },
     { name: 'Distribution', href: '/distribution' },
+    { name: 'Quality & Compliance', href: '/quality-compliance' },
     { name: 'Solutions', href: '#solutions' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '#contact' },

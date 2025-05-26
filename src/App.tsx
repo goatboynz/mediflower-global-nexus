@@ -11,6 +11,7 @@ import ExpertConsulting from "./pages/ExpertConsulting";
 import CustomTechnology from "./pages/CustomTechnology";
 import Manufacturing from "./pages/Manufacturing";
 import Distribution from "./pages/Distribution";
+import QualityCompliancePage from "./pages/QualityCompliance";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/custom-technology" element={<CustomTechnology />} />
           <Route path="/manufacturing" element={<Manufacturing />} />
           <Route path="/distribution" element={<Distribution />} />
+          <Route path="/quality-compliance" element={<QualityCompliancePage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
