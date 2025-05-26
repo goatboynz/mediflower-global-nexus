@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Menu, X, Leaf } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -11,6 +10,7 @@ const Header = () => {
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '#services' },
+    { name: 'Premium Cultivation', href: '/premium-cultivation' },
     { name: 'Solutions', href: '#solutions' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '#contact' },
