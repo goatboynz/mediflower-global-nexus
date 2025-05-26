@@ -17,6 +17,12 @@ import QualityCompliancePage from "./pages/QualityCompliance";
 import ResearchDevelopment from "./pages/ResearchDevelopment";
 import SustainabilityInitiatives from "./pages/SustainabilityInitiatives";
 import ContactPartnerships from "./pages/ContactPartnerships";
+import HCPRegistration from "./pages/HCPRegistration";
+import HCPLogin from "./pages/HCPLogin";
+import HCPDashboard from "./pages/HCPDashboard";
+import HCPProducts from "./pages/HCPProducts";
+import HCPResearch from "./pages/HCPResearch";
+import HCPEducation from "./pages/HCPEducation";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -41,6 +47,12 @@ const App = () => (
           <Route path="/research-development" element={<ResearchDevelopment />} />
           <Route path="/sustainability-initiatives" element={<SustainabilityInitiatives />} />
           <Route path="/contact-partnerships" element={<ContactPartnerships />} />
+          <Route path="/hcp-registration" element={<HCPRegistration />} />
+          <Route path="/hcp-login" element={<HCPLogin />} />
+          <Route path="/hcp-dashboard" element={<HCPDashboard />} />
+          <Route path="/hcp-products" element={<HCPProducts />} />
+          <Route path="/hcp-research" element={<HCPResearch />} />
+          <Route path="/hcp-education" element={<HCPEducation />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
