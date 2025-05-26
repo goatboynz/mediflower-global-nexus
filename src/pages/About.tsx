@@ -1,7 +1,8 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Users, Target, Award, Globe, Lightbulb, Heart, Leaf, Shield } from 'lucide-react';
+import { Users, Target, Award, Globe, Lightbulb, Heart, Leaf, Shield, Factory, Beaker } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';

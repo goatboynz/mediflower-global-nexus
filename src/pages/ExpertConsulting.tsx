@@ -3,7 +3,7 @@ import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Users, Target, Lightbulb, TrendingUp, Globe, Award, CheckCircle, ArrowRight } from 'lucide-react';
+import { Users, Target, Lightbulb, TrendingUp, Globe, Award, CheckCircle, ArrowRight, Shield, BarChart, Cpu } from 'lucide-react';
 
 const ExpertConsulting = () => {
   const coreServices = [
@@ -56,7 +56,7 @@ const ExpertConsulting = () => {
     {
       title: "Market Analysis",
       description: "Providing in-depth market insights and competitive analysis",
-      icon: BarChart3
+      icon: BarChart
     },
     {
       title: "Technology Integration",
