@@ -6,6 +6,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Calendar, Clock, Users, Lightbulb } from 'lucide-react';
 import { useState } from 'react';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const ContactConsultation = () => {
   const [formData, setFormData] = useState({
@@ -34,6 +36,8 @@ const ContactConsultation = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-emerald-50">
+      <Header />
+      
       {/* Hero Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -231,6 +235,8 @@ const ContactConsultation = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

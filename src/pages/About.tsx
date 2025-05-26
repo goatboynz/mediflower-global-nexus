@@ -1,205 +1,239 @@
-
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
-import { Award, Leaf, Shield, Users, Zap, Handshake } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { Users, Target, Award, Globe, Lightbulb, Heart, Leaf, Shield } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const About = () => {
-  const values = [
+  const teamMembers = [
+    {
+      name: "Dr. Emily Carter",
+      title: "Chief Science Officer",
+      description: "Ph.D. in Plant Genetics with 15+ years in cannabis research.",
+      image: "https://images.unsplash.com/photo-1584438473107-3ca207489496?auto=format&fit=crop&w=400&h=400",
+      linkedin: "#"
+    },
+    {
+      name: "Michael Thompson",
+      title: "Chief Cultivation Officer",
+      description: "Expert in controlled environment agriculture and sustainable cultivation practices.",
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286467?auto=format&fit=crop&w=400&h=400",
+      linkedin: "#"
+    },
+    {
+      name: "Sarah Johnson",
+      title: "Chief Strategy Officer",
+      description: "MBA with extensive experience in cannabis business strategy and market development.",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&h=400",
+      linkedin: "#"
+    }
+  ];
+
+  const visionPoints = [
+    "Pioneering cannabis-based therapies",
+    "Setting new standards for quality and safety",
+    "Driving innovation through research and development",
+    "Promoting sustainable and ethical practices"
+  ];
+
+  const missionStatements = [
+    "To lead the medical cannabis industry through innovation and research.",
+    "To provide patients with safe, effective, and consistent cannabis-based therapies.",
+    "To promote sustainable and ethical practices in cannabis cultivation and production."
+  ];
+
+  const coreValues = [
     {
       title: "Innovation",
-      description: "Pioneering advanced technologies and methodologies in medical cannabis cultivation and processing.",
-      icon: Zap
+      description: "We embrace cutting-edge research and technology to drive advancements in medical cannabis.",
+      icon: Lightbulb
     },
     {
       title: "Quality",
-      description: "Uncompromising standards in every aspect of our operations, from seed to final product.",
-      icon: Award
-    },
-    {
-      title: "Sustainability",
-      description: "Environmental responsibility and sustainable practices throughout our operations.",
-      icon: Leaf
-    },
-    {
-      title: "Partnership",
-      description: "Building lasting relationships with clients, suppliers, and the global cannabis community.",
-      icon: Handshake
-    },
-    {
-      title: "Compliance",
-      description: "Rigorous adherence to all regulatory requirements and international standards.",
+      description: "We are committed to the highest standards of product quality, safety, and consistency.",
       icon: Shield
     },
     {
+      title: "Sustainability",
+      description: "We prioritize environmentally responsible practices and sustainable resource management.",
+      icon: Leaf
+    },
+    {
       title: "Integrity",
-      description: "Transparent, ethical business practices that build trust and credibility.",
-      icon: Users
+      description: "We operate with transparency, ethics, and accountability in all our business practices.",
+      icon: Heart
     }
   ];
 
-  const milestones = [
-    { year: "2024", event: "MediFlower NZ founded in Christchurch with vision for comprehensive medical cannabis solutions" },
-    { year: "2024", event: "State-of-the-art cultivation facility development initiated with GMP compliance standards" },
-    { year: "2024", event: "Technology development program launched for custom cannabis industry solutions" },
-    { year: "2024", event: "International partnership network established across Asia-Pacific region" },
-    { year: "2025", event: "Full-scale operations commenced with export-quality medical cannabis production" }
+  const expertiseAreas = [
+    {
+      title: "Genetics & Cultivation",
+      description: "Expertise in cannabis genetics, breeding, and advanced cultivation techniques.",
+      icon: Leaf
+    },
+    {
+      title: "Pharmaceutical Manufacturing",
+      description: "GMP-certified manufacturing of pharmaceutical-grade cannabis products.",
+      icon: Factory
+    },
+    {
+      title: "Clinical Research",
+      description: "Dedicated to advancing medical cannabis science through rigorous clinical research.",
+      icon: Beaker
+    },
+    {
+      title: "Regulatory Compliance",
+      description: "Expertise in navigating complex regulatory frameworks for medical cannabis.",
+      icon: Shield
+    }
   ];
 
-  const leadership = [
-    {
-      name: "Dr. Sarah Mitchell",
-      title: "Chief Executive Officer",
-      bio: "15+ years in pharmaceutical development with expertise in regulatory affairs and international market expansion.",
-      image: "👩‍💼"
-    },
-    {
-      name: "James Thompson",
-      title: "Chief Technology Officer",
-      bio: "Former Silicon Valley executive specializing in agricultural technology and IoT solutions for controlled environments.",
-      image: "👨‍💻"
-    },
-    {
-      name: "Dr. Michael Chen",
-      title: "Head of Cultivation",
-      bio: "PhD in Plant Sciences with 20+ years experience in premium cannabis cultivation and genetics research.",
-      image: "👨‍🔬"
-    },
-    {
-      name: "Lisa Rodriguez",
-      title: "Director of International Business",
-      bio: "Former trade commissioner with extensive experience in Asia-Pacific markets and regulatory compliance.",
-      image: "👩‍💼"
-    }
+  const globalReachPoints = [
+    "Strategic partnerships with international cannabis companies",
+    "Export capabilities to key global markets",
+    "Compliance with international regulatory standards",
+    "Commitment to global patient access"
   ];
 
   return (
     <div className="min-h-screen bg-white">
+      <Header />
+      
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-emerald-50 to-blue-50">
+      <section className="relative bg-gradient-to-br from-emerald-50 via-white to-green-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              About MediFlower NZ:
-              <span className="text-emerald-600 block mt-2">Our Story, Mission, and Values</span>
-            </h1>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Founded in 2024, MediFlower NZ stands at the forefront of medical cannabis innovation, combining New Zealand's 
-              pristine growing conditions with cutting-edge technology and decades of industry expertise. 
-              Our comprehensive approach spans the entire cannabis value chain, from genetic development 
-              and premium cultivation to advanced manufacturing, custom technology solutions, and global distribution.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <Badge variant="outline" className="mb-4 border-emerald-200 text-emerald-700">
+                About Us
+              </Badge>
+              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                Pioneering Medical Cannabis Solutions
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                MediFlower NZ is at the forefront of medical cannabis innovation, dedicated to 
+                improving patient outcomes through cutting-edge research, advanced cultivation 
+                practices, and pharmaceutical-grade manufacturing.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700">
+                  Our Mission
+                </Button>
+                <Button variant="outline" size="lg" className="border-emerald-600 text-emerald-600 hover:bg-emerald-50">
+                  Meet the Team
+                </Button>
+              </div>
+            </div>
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1563783446494-64b7ef130a39?auto=format&fit=crop&w=800&h=600"
+                alt="Modern laboratory research technology"
+                className="rounded-lg shadow-2xl"
+              />
+              <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg">
+                <div className="flex items-center space-x-3">
+                  <Lightbulb className="h-8 w-8 text-emerald-600" />
+                  <div>
+                    <p className="font-semibold text-gray-900">Innovation First</p>
+                    <p className="text-sm text-gray-600">Leading cannabis research</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="py-20">
+      {/* Our Story */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <Card className="border-0 shadow-lg bg-gradient-to-br from-emerald-50 to-white">
-              <CardContent className="p-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  To provide high-quality, innovative medical cannabis solutions that improve lives 
-                  through sustainable cultivation practices, expert consulting, cutting-edge technology, 
-                  and reliable global distribution. We are committed to advancing the medical cannabis 
-                  industry while maintaining the highest standards of safety, efficacy, and compliance.
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="border-0 shadow-lg bg-gradient-to-br from-blue-50 to-white">
-              <CardContent className="p-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Vision</h2>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  To be a global leader in sustainable and technologically advanced medical cannabis, 
-                  setting industry standards for quality, innovation, and environmental responsibility. 
-                  We envision a world where premium medical cannabis solutions are accessible, 
-                  trusted, and contributing to better health outcomes worldwide.
-                </p>
-              </CardContent>
-            </Card>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Story</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Founded in New Zealand, MediFlower NZ emerged from a vision to transform the medical 
+              cannabis landscape through science-backed solutions and patient-centered care.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            {teamMembers.map((member, index) => (
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+                <CardHeader className="pb-4">
+                  <img 
+                    src={member.image}
+                    alt={member.name}
+                    className="rounded-full w-24 h-24 mx-auto mb-4"
+                  />
+                  <CardTitle className="text-2xl text-gray-900 group-hover:text-emerald-600 transition-colors text-center">
+                    {member.name}
+                  </CardTitle>
+                  <CardDescription className="text-gray-600 text-center">
+                    {member.title}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700 text-center">{member.description}</p>
+                  <div className="mt-4 text-center">
+                    <Link to={member.linkedin} className="text-blue-500 hover:text-blue-700">
+                      LinkedIn Profile
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Vision & Mission */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Vision</h2>
+              <ul className="list-disc list-inside text-lg text-gray-600 space-y-3">
+                {visionPoints.map((point, index) => (
+                  <li key={index}>{point}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
+              <ul className="list-decimal list-inside text-lg text-gray-600 space-y-3">
+                {missionStatements.map((statement, index) => (
+                  <li key={index}>{statement}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Core Values */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Core Values</h2>
-            <p className="text-xl text-gray-600">
-              The principles that guide everything we do at MediFlower NZ
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {values.map((value, index) => (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6 text-center">
-                  <value.icon className="h-12 w-12 text-emerald-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
-                  <p className="text-gray-600">{value.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Our Journey */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Journey</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From our founding in Christchurch to becoming a leader in comprehensive medical cannabis solutions
+              These values guide our decisions and actions, shaping our culture and driving our success.
             </p>
           </div>
-          
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-emerald-200"></div>
-            <div className="space-y-12">
-              {milestones.map((milestone, index) => (
-                <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8'}`}>
-                    <Card className="border-0 shadow-lg">
-                      <CardContent className="p-6">
-                        <div className="text-2xl font-bold text-emerald-600 mb-2">{milestone.year}</div>
-                        <p className="text-gray-700">{milestone.event}</p>
-                      </CardContent>
-                    </Card>
-                  </div>
-                  <div className="relative z-10">
-                    <div className="w-4 h-4 bg-emerald-600 rounded-full border-4 border-white shadow-lg"></div>
-                  </div>
-                  <div className="w-1/2"></div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Leadership Team */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Leadership Team</h2>
-            <p className="text-xl text-gray-600">
-              Experienced professionals driving innovation in medical cannabis
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {leadership.map((member, index) => (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6 text-center">
-                  <div className="text-6xl mb-4">{member.image}</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name}</h3>
-                  <div className="text-emerald-600 font-medium mb-3">{member.title}</div>
-                  <p className="text-gray-600 text-sm">{member.bio}</p>
+          <div className="grid md:grid-cols-2 gap-8">
+            {coreValues.map((value, index) => (
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+                <CardHeader className="pb-4">
+                  <div className="flex items-center space-x-4 mb-4">
+                    <value.icon className="h-8 w-8 text-emerald-600" />
+                    <CardTitle className="text-2xl text-gray-900 group-hover:text-emerald-600 transition-colors">
+                      {value.title}
+                    </CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700">{value.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -207,95 +241,85 @@ const About = () => {
         </div>
       </section>
 
-      {/* Our Facility */}
-      <section className="py-20">
+      {/* Expertise Areas */}
+      <section className="py-20 bg-gradient-to-br from-emerald-50 to-green-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Our State-of-the-Art Christchurch Facility
-              </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Our world-class facility in Christchurch represents the pinnacle of medical cannabis 
-                cultivation and manufacturing technology. Designed with precision environmental controls, 
-                advanced security systems, and GMP-compliant processing areas.
-              </p>
-              <div className="space-y-4 mb-8">
-                {[
-                  "Climate-controlled cultivation environments",
-                  "Advanced LED lighting systems", 
-                  "Automated irrigation and nutrient delivery",
-                  "GMP-compliant extraction and processing labs",
-                  "Quality control and testing laboratories",
-                  "Secure packaging and logistics center"
-                ].map((feature, idx) => (
-                  <div key={idx} className="flex items-center">
-                    <div className="w-2 h-2 bg-emerald-500 rounded-full mr-3"></div>
-                    <span className="text-gray-700">{feature}</span>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Areas of Expertise</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our multidisciplinary team brings together expertise in genetics, cultivation, 
+              pharmaceutical manufacturing, clinical research, and regulatory compliance.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {expertiseAreas.map((area, index) => (
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+                <CardHeader className="pb-4">
+                  <div className="flex items-center space-x-4 mb-4">
+                    <area.icon className="h-8 w-8 text-emerald-600" />
+                    <CardTitle className="text-2xl text-gray-900 group-hover:text-emerald-600 transition-colors">
+                      {area.title}
+                    </CardTitle>
                   </div>
-                ))}
-              </div>
-              <Button className="bg-emerald-600 hover:bg-emerald-700">
-                Schedule Facility Tour
-              </Button>
-            </div>
-            <Card className="border-0 shadow-2xl">
-              <CardContent className="p-0">
-                <div className="aspect-video bg-gradient-to-br from-emerald-100 to-blue-100 rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-8xl mb-4">🏢</div>
-                    <p className="text-xl font-semibold text-gray-700">
-                      MediFlower NZ Facility
-                    </p>
-                    <p className="text-gray-600">Christchurch, New Zealand</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700">{area.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Commitment to New Zealand */}
-      <section className="py-20 bg-gradient-to-br from-emerald-600 to-emerald-800">
+      {/* Global Reach */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="border-0 shadow-2xl bg-white/95 backdrop-blur-sm">
-            <CardContent className="p-12 text-center">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Our Commitment to New Zealand
-              </h2>
-              <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Proudly New Zealand-owned and operated, MediFlower NZ is committed to contributing 
-                to the local economy while showcasing Kiwi innovation on the global stage. We employ 
-                local talent, support New Zealand suppliers, and maintain the highest standards that 
-                reflect our nation's reputation for quality and integrity.
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                <div>
-                  <div className="text-4xl mb-3">🇳🇿</div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">New Zealand Made</h3>
-                  <p className="text-gray-600">Cultivated and manufactured in New Zealand</p>
-                </div>
-                <div>
-                  <div className="text-4xl mb-3">🌿</div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Local Employment</h3>
-                  <p className="text-gray-600">Supporting Canterbury communities</p>
-                </div>
-                <div>
-                  <div className="text-4xl mb-3">🏆</div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Quality Assured</h3>
-                  <p className="text-gray-600">Certified to international standards</p>
-                </div>
-              </div>
-              
-              <Button className="bg-emerald-600 hover:bg-emerald-700 px-8 py-3">
-                Learn About Our NZ Operations
-              </Button>
-            </CardContent>
-          </Card>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Global Reach</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We are committed to expanding access to our medical cannabis solutions worldwide, 
+              partnering with leading organizations to serve patients in key global markets.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <ul className="list-disc list-inside text-lg text-gray-600 space-y-3">
+                {globalReachPoints.map((point, index) => (
+                  <li key={index}>{point}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <Globe className="h-48 w-full text-gray-300" />
+            </div>
+          </div>
         </div>
       </section>
+
+      {/* Call to Action */}
+      <section className="py-20 bg-emerald-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Partner with Us?
+          </h2>
+          <p className="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
+            Discover how our expertise and commitment to quality can benefit your organization 
+            and the patients you serve.
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Button size="lg" className="bg-white text-emerald-600 hover:bg-emerald-50">
+              Contact Us
+            </Button>
+            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-emerald-600">
+              Explore Partnership Opportunities
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </div>
   );
 };

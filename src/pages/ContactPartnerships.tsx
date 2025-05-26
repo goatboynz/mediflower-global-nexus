@@ -1,4 +1,3 @@
-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -11,7 +10,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { useState } from 'react';
-import { MapPin, Phone, Mail, Users, Globe, Handshake, Linkedin } from 'lucide-react';
+import { MapPin, Phone, Mail, Users, Globe, Handshake, Linkedin, Building, TrendingUp, Award } from 'lucide-react';
 
 const contactFormSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -101,14 +100,29 @@ const ContactPartnerships = () => {
       title: "Technology Ventures",
       description: "Collaborate on innovative cannabis technology and cultivation solutions"
     },
+    {
+      icon: Building,
+      title: "Manufacturing Partnerships",
+      description: "Collaborate on contract manufacturing and supply chain solutions"
+    },
+    {
+      icon: TrendingUp,
+      title: "Investment Opportunities",
+      description: "Invest in our company and share in our growth"
+    },
+    {
+      icon: Award,
+      title: "Award-Winning Products",
+      description: "Our products have received numerous awards for quality and efficacy"
+    },
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-50">
       <Header />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-emerald-600 to-emerald-800 text-white">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Connect With Us: Let's Innovate Together
