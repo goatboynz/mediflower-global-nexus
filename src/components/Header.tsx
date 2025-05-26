@@ -23,10 +23,8 @@ const Header = () => {
   const mainNavItems = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { name: 'Contact & Partnerships', href: '/contact-partnerships' },
+    { name: 'Contact', href: '/contact' },
   ];
-
-  const isInternalRoute = (href: string) => href.startsWith('/');
 
   return (
     <header className="bg-white/95 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b border-emerald-100">
@@ -84,12 +82,16 @@ const Header = () => {
           </nav>
 
           <div className="hidden lg:flex items-center space-x-3">
-            <Button variant="outline" className="border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-50 px-6 py-2 font-semibold">
-              Partner Portal
-            </Button>
-            <Button className="bg-emerald-600 hover:bg-emerald-700 px-6 py-2 font-semibold shadow-lg">
-              Get Consultation
-            </Button>
+            <Link to="/contact-consultation">
+              <Button variant="outline" className="border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-50 px-6 py-2 font-semibold">
+                Book Consultation
+              </Button>
+            </Link>
+            <Link to="/contact-partnerships">
+              <Button className="bg-emerald-600 hover:bg-emerald-700 px-6 py-2 font-semibold shadow-lg">
+                Partner With Us
+              </Button>
+            </Link>
           </div>
 
           <button
@@ -135,12 +137,16 @@ const Header = () => {
               </div>
               
               <div className="pt-4 space-y-3 px-4">
-                <Button variant="outline" className="w-full border-2 border-emerald-600 text-emerald-600 font-semibold">
-                  Partner Portal
-                </Button>
-                <Button className="w-full bg-emerald-600 hover:bg-emerald-700 font-semibold">
-                  Get Consultation
-                </Button>
+                <Link to="/contact-consultation">
+                  <Button variant="outline" className="w-full border-2 border-emerald-600 text-emerald-600 font-semibold">
+                    Book Consultation
+                  </Button>
+                </Link>
+                <Link to="/contact-partnerships">
+                  <Button className="w-full bg-emerald-600 hover:bg-emerald-700 font-semibold">
+                    Partner With Us
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

@@ -39,11 +39,11 @@ const About = () => {
   ];
 
   const milestones = [
-    { year: "2020", event: "MediFlower NZ founded in Christchurch with vision for premium medical cannabis" },
-    { year: "2021", event: "State-of-the-art cultivation facility construction completed" },
-    { year: "2022", event: "First harvest of export-quality medical cannabis products" },
-    { year: "2023", event: "International partnerships established across 15+ countries" },
-    { year: "2024", event: "Advanced technology solutions launched for global cannabis industry" }
+    { year: "2024", event: "MediFlower NZ founded in Christchurch with vision for comprehensive medical cannabis solutions" },
+    { year: "2024", event: "State-of-the-art cultivation facility development initiated with GMP compliance standards" },
+    { year: "2024", event: "Technology development program launched for custom cannabis industry solutions" },
+    { year: "2024", event: "International partnership network established across Asia-Pacific region" },
+    { year: "2025", event: "Full-scale operations commenced with export-quality medical cannabis production" }
   ];
 
   const leadership = [
@@ -80,11 +80,11 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Leading Cannabis Innovation:
+              About MediFlower NZ:
               <span className="text-emerald-600 block mt-2">Our Story, Mission, and Values</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              MediFlower NZ stands at the forefront of medical cannabis innovation, combining New Zealand's 
+              Founded in 2024, MediFlower NZ stands at the forefront of medical cannabis innovation, combining New Zealand's 
               pristine growing conditions with cutting-edge technology and decades of industry expertise. 
               Our comprehensive approach spans the entire cannabis value chain, from genetic development 
               and premium cultivation to advanced manufacturing, custom technology solutions, and global distribution.
@@ -154,7 +154,7 @@ const About = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Journey</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From our founding in Christchurch to becoming a global leader in medical cannabis innovation
+              From our founding in Christchurch to becoming a leader in comprehensive medical cannabis solutions
             </p>
           </div>
           
